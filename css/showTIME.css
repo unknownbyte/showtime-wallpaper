@@ -1,0 +1,102 @@
+/*!showTIME.css
+ * Main stylesheet for showTIME wallpaper.
+ *
+ */
+
+html,body{height:100%;}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    width: 100%;
+}
+
+.clock {
+    display: none;
+    position: fixed;
+    z-index: 2;
+}
+#clock-analog {
+    background-color: #343434;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 0 7px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    height: 200px;
+    /* position: relative; */
+    width: 200px;
+}
+#clock-analog::after {
+    background-color: #fff;
+    border-radius: 100%;
+    content: "";
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+}
+#clock-analog .hand {
+    background-color: #fff;
+    border-radius: 2em;
+    position: absolute;
+    top: 0;
+    transform-origin: 50% 100%;
+}
+#clock-analog-hand-hour {
+    height: 30%;
+    margin: 20% 48.5% 0 48.5%;
+    width: 3%;
+}
+#clock-analog-hand-minute {
+    height: 37%;
+    margin: 13% 49% 0 49%;
+    width: 2%;
+}
+#clock-analog-hand-second {
+    background-color: #f00;
+    height: 40%;
+    margin: 10% 49.5% 0 49.5%;
+    width: 1%;
+}
+
+#clock-digital {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+body[data-clock-position-h="left"] .clock {
+    left: 25px;
+}
+body[data-clock-position-h="center"] .clock {
+    left: 50%;
+    transform: translateX(-50%);
+}
+body[data-clock-position-h="right"] .clock {
+    right: 25px;
+}
+body[data-clock-position-v="top"] .clock {
+    top: 25px;
+}
+body[data-clock-position-v="center"] .clock {
+    top: 50%;
+    transform: translateY(-50%);
+}
+body[data-clock-position-v="bottom"] .clock {
+    bottom: 25px;
+}
+body[data-clock-position-h="center"][data-clock-position-v="center"] .clock {
+    transform: translate(-50%, -50%);
+}
+body[data-clock-clocktype="analog"] #clock-analog {
+    display: block;
+}
+body[data-clock-clocktype="digital"] #clock-digital {
+    display: block;
+}
+body[data-clock-clocktype="binary"] #clock-binary {
+    display: block;
+}

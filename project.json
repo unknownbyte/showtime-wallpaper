@@ -1,0 +1,535 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "Display the current local time on your desktop.\n\n[h1]Features[/h1]\n\n[b]3 clock types[/b]\nChoose between the following 3 available modes:\n[list]\n    [*]Analog\n    A simple round clock with three hands\n    [*]Binary\n    Displays the current time in binary format (only for tech geeks!)\n    [*]Digital\n    The modern way of displaying the time\n[/list]\n\n[b]Style of background[/b]\nYou decide how your background looks like - choose one of the following modes:\n[list]\n    [*]Fill screen with a color\n    [*]Linear gradient from one color to another\n    [*]Radial gradient (follows the mouse if set)\n    [*]Select your favourite image from your gallery\n[/list]\n\n[b]Customize the appearance[/b]\nby changing the color and the size of the clock and the background image",
+	"file" : "showTIME.html",
+	"general" : 
+	{
+		"localization" : 
+		{
+			"de-de" : {},
+			"en-us" : 
+			{
+				"ui_background_fillcolor_color" : "Fill color:",
+				"ui_background_heading" : "<h3>Background</h3>",
+				"ui_background_image_basecolor" : "Base color:",
+				"ui_background_image_path" : "Image:",
+				"ui_background_image_position" : "Position:",
+				"ui_background_image_position_bottomleftcorner" : "Bottom left",
+				"ui_background_image_position_bottomrightcorner" : "Bottom right",
+				"ui_background_image_position_bottomside" : "Bottom",
+				"ui_background_image_position_center" : "Center",
+				"ui_background_image_position_leftside" : "Left",
+				"ui_background_image_position_rightside" : "Right",
+				"ui_background_image_position_topleftcorner" : "Top left",
+				"ui_background_image_position_toprightcorner" : "Top right",
+				"ui_background_image_position_topside" : "Top",
+				"ui_background_image_repeat" : "Repeat:",
+				"ui_background_image_repeat_norepeat" : "no-repeat",
+				"ui_background_image_repeat_repeat" : "repeat",
+				"ui_background_image_repeat_repeatx" : "repeat-x",
+				"ui_background_image_repeat_repeaty" : "repeat-y",
+				"ui_background_image_repeat_round" : "round",
+				"ui_background_image_repeat_space" : "space",
+				"ui_background_image_size" : "Size:",
+				"ui_background_image_size_contain" : "contain",
+				"ui_background_image_size_cover" : "cover",
+				"ui_background_image_size_originalsize" : "original",
+				"ui_background_lineargradient_angle" : "Angle [deg]:",
+				"ui_background_lineargradient_endcolor" : "End color:",
+				"ui_background_lineargradient_startcolor" : "Start color:",
+				"ui_background_radialgradient_innercolor" : "Inner color:",
+				"ui_background_radialgradient_outercolor" : "Outer color:",
+				"ui_background_radialgradient_position" : "Position:",
+				"ui_background_radialgradient_position_bottomleftcorner" : "Bottom left",
+				"ui_background_radialgradient_position_bottomrightcorner" : "Bottom right",
+				"ui_background_radialgradient_position_bottomside" : "Bottom",
+				"ui_background_radialgradient_position_center" : "Center",
+				"ui_background_radialgradient_position_followmouse" : "Follow mouse",
+				"ui_background_radialgradient_position_leftside" : "Left",
+				"ui_background_radialgradient_position_rightside" : "Right",
+				"ui_background_radialgradient_position_topleftcorner" : "Top left",
+				"ui_background_radialgradient_position_toprightcorner" : "Top right",
+				"ui_background_radialgradient_position_topside" : "Top",
+				"ui_background_radialgradient_shape" : "Shape:",
+				"ui_background_radialgradient_shape_circle" : "Circle",
+				"ui_background_radialgradient_shape_ellipse" : "Ellipse",
+				"ui_background_type" : "<b>Type</b>",
+				"ui_background_type_fillcolor" : "Fill color",
+				"ui_background_type_image" : "Image",
+				"ui_background_type_lineargradient" : "Linear gradient",
+				"ui_background_type_radialgradient" : "Radial gradient",
+				"ui_clock_binary_dotcolor" : "Dot color:",
+				"ui_clock_binary_dotcoloractive" : "Dot color active:",
+				"ui_clock_binary_dotsize" : "Dot size [px]:",
+				"ui_clock_clocktype" : "<b>Type</b>",
+				"ui_clock_clocktype_analog" : "Analog",
+				"ui_clock_clocktype_binary" : "Binary",
+				"ui_clock_clocktype_digital" : "Digital",
+				"ui_clock_digital_fontcolor" : "Font color:",
+				"ui_clock_digital_fontsize" : "Font size [px]:",
+				"ui_clock_digital_timeformat" : "Time format:",
+				"ui_clock_digital_timeformat_12h" : "12h",
+				"ui_clock_digital_timeformat_24h" : "24h",
+				"ui_clock_heading" : "<h3>Clock Settings</h3>",
+				"ui_clock_position_h" : "Horizontal:",
+				"ui_clock_position_h_center" : "Center",
+				"ui_clock_position_h_left" : "Left",
+				"ui_clock_position_h_right" : "Right",
+				"ui_clock_position_subheading" : "<b>Position</b>",
+				"ui_clock_position_v" : "Vertical:",
+				"ui_clock_position_v_bottom" : "Bottom",
+				"ui_clock_position_v_center" : "Center",
+				"ui_clock_position_v_top" : "Top",
+				"ui_schemecolor_spacier" : "<h3>Other</h3>",
+				"ui_z_version" : "<i><br>Version 0.1.1 | 2018-07-19</i>"
+			}
+		},
+		"properties" : 
+		{
+			"background_fillcolor_color" : 
+			{
+				"condition" : "background_type.value == 1",
+				"order" : 22,
+				"text" : "ui_background_fillcolor_color",
+				"type" : "color",
+				"value" : "0.51 0.79 0.38"
+			},
+			"background_heading" : 
+			{
+				"order" : 20,
+				"text" : "ui_background_heading",
+				"type" : "text",
+				"value" : ""
+			},
+			"background_image_basecolor" : 
+			{
+				"condition" : "background_type.value == 4",
+				"order" : 23,
+				"text" : "ui_background_image_basecolor",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"background_image_path" : 
+			{
+				"condition" : "background_type.value == 4",
+				"order" : 22,
+				"text" : "ui_background_image_path",
+				"type" : "file",
+				"value" : ""
+			},
+			"background_image_position" : 
+			{
+				"condition" : "background_type.value == 4",
+				"options" : 
+				[
+					{
+						"label" : "ui_background_image_position_topleftcorner",
+						"value" : 2
+					},
+					{
+						"label" : "ui_background_image_position_topside",
+						"value" : 6
+					},
+					{
+						"label" : "ui_background_image_position_toprightcorner",
+						"value" : 3
+					},
+					{
+						"label" : "ui_background_image_position_leftside",
+						"value" : 9
+					},
+					{
+						"label" : "ui_background_image_position_center",
+						"value" : 1
+					},
+					{
+						"label" : "ui_background_image_position_rightside",
+						"value" : 7
+					},
+					{
+						"label" : "ui_background_image_position_bottomleftcorner",
+						"value" : 5
+					},
+					{
+						"label" : "ui_background_image_position_bottomside",
+						"value" : 8
+					},
+					{
+						"label" : "ui_background_image_position_bottomrightcorner",
+						"value" : 4
+					}
+				],
+				"order" : 24,
+				"text" : "ui_background_image_position",
+				"type" : "combo",
+				"value" : 1
+			},
+			"background_image_repeat" : 
+			{
+				"condition" : "background_type.value == 4",
+				"options" : 
+				[
+					{
+						"label" : "ui_background_image_repeat_norepeat",
+						"value" : 1
+					},
+					{
+						"label" : "ui_background_image_repeat_repeat",
+						"value" : 2
+					},
+					{
+						"label" : "ui_background_image_repeat_repeatx",
+						"value" : 3
+					},
+					{
+						"label" : "ui_background_image_repeat_repeaty",
+						"value" : 4
+					},
+					{
+						"label" : "ui_background_image_repeat_round",
+						"value" : 5
+					},
+					{
+						"label" : "ui_background_image_repeat_space",
+						"value" : 6
+					}
+				],
+				"order" : 25,
+				"text" : "ui_background_image_repeat",
+				"type" : "combo",
+				"value" : 1
+			},
+			"background_image_size" : 
+			{
+				"condition" : "background_type.value == 4",
+				"options" : 
+				[
+					{
+						"label" : "ui_background_image_size_contain",
+						"value" : 1
+					},
+					{
+						"label" : "ui_background_image_size_cover",
+						"value" : 2
+					},
+					{
+						"label" : "ui_background_image_size_originalsize",
+						"value" : 3
+					}
+				],
+				"order" : 26,
+				"text" : "ui_background_image_size",
+				"type" : "combo",
+				"value" : 2
+			},
+			"background_lineargradient_angle" : 
+			{
+				"condition" : "background_type.value == 2",
+				"max" : 360,
+				"min" : 0,
+				"order" : 22,
+				"text" : "ui_background_lineargradient_angle",
+				"type" : "slider",
+				"value" : 0
+			},
+			"background_lineargradient_endcolor" : 
+			{
+				"condition" : "background_type.value == 2",
+				"order" : 24,
+				"text" : "ui_background_lineargradient_endcolor",
+				"type" : "color",
+				"value" : "0.13 0.14 0.76"
+			},
+			"background_lineargradient_startcolor" : 
+			{
+				"condition" : "background_type.value == 2",
+				"order" : 23,
+				"text" : "ui_background_lineargradient_startcolor",
+				"type" : "color",
+				"value" : "0.72 1 0.69"
+			},
+			"background_radialgradient_innercolor" : 
+			{
+				"condition" : "background_type.value == 3",
+				"order" : 24,
+				"text" : "ui_background_radialgradient_innercolor",
+				"type" : "color",
+				"value" : "0.69 0.81 1"
+			},
+			"background_radialgradient_outercolor" : 
+			{
+				"condition" : "background_type.value == 3",
+				"order" : 25,
+				"text" : "ui_background_radialgradient_outercolor",
+				"type" : "color",
+				"value" : "0.13 0.38 0.76"
+			},
+			"background_radialgradient_position" : 
+			{
+				"condition" : "background_type.value == 3",
+				"options" : 
+				[
+					{
+						"label" : "ui_background_radialgradient_position_followmouse",
+						"value" : 10
+					},
+					{
+						"label" : "ui_background_radialgradient_position_topleftcorner",
+						"value" : 2
+					},
+					{
+						"label" : "ui_background_radialgradient_position_topside",
+						"value" : 6
+					},
+					{
+						"label" : "ui_background_radialgradient_position_toprightcorner",
+						"value" : 3
+					},
+					{
+						"label" : "ui_background_radialgradient_position_leftside",
+						"value" : 9
+					},
+					{
+						"label" : "ui_background_radialgradient_position_center",
+						"value" : 1
+					},
+					{
+						"label" : "ui_background_radialgradient_position_rightside",
+						"value" : 7
+					},
+					{
+						"label" : "ui_background_radialgradient_position_bottomleftcorner",
+						"value" : 5
+					},
+					{
+						"label" : "ui_background_radialgradient_position_bottomside",
+						"value" : 8
+					},
+					{
+						"label" : "ui_background_radialgradient_position_bottomrightcorner",
+						"value" : 4
+					}
+				],
+				"order" : 22,
+				"text" : "ui_background_radialgradient_position",
+				"type" : "combo",
+				"value" : 10
+			},
+			"background_radialgradient_shape" : 
+			{
+				"condition" : "background_type.value == 3",
+				"options" : 
+				[
+					{
+						"label" : "ui_background_radialgradient_shape_circle",
+						"value" : 1
+					},
+					{
+						"label" : "ui_background_radialgradient_shape_ellipse",
+						"value" : 2
+					}
+				],
+				"order" : 23,
+				"text" : "ui_background_radialgradient_shape",
+				"type" : "combo",
+				"value" : 1
+			},
+			"background_type" : 
+			{
+				"options" : 
+				[
+					{
+						"label" : "ui_background_type_fillcolor",
+						"value" : 1
+					},
+					{
+						"label" : "ui_background_type_lineargradient",
+						"value" : 2
+					},
+					{
+						"label" : "ui_background_type_radialgradient",
+						"value" : 3
+					},
+					{
+						"label" : "ui_background_type_image",
+						"value" : 4
+					}
+				],
+				"order" : 21,
+				"text" : "ui_background_type",
+				"type" : "combo",
+				"value" : 2
+			},
+			"clock_binary_dotcolor" : 
+			{
+				"condition" : "clock_clocktype.value == 3",
+				"order" : 2,
+				"text" : "ui_clock_binary_dotcolor",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"clock_binary_dotcoloractive" : 
+			{
+				"condition" : "clock_clocktype.value == 3",
+				"order" : 3,
+				"text" : "ui_clock_binary_dotcoloractive",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"clock_binary_dotsize" : 
+			{
+				"condition" : "clock_clocktype.value == 3",
+				"max" : 50,
+				"min" : 25,
+				"order" : 4,
+				"text" : "ui_clock_binary_dotsize",
+				"type" : "slider",
+				"value" : 35
+			},
+			"clock_clocktype" : 
+			{
+				"options" : 
+				[
+					{
+						"label" : "ui_clock_clocktype_analog",
+						"value" : 1
+					},
+					{
+						"label" : "ui_clock_clocktype_digital",
+						"value" : 2
+					},
+					{
+						"label" : "ui_clock_clocktype_binary",
+						"value" : 3
+					}
+				],
+				"order" : 1,
+				"text" : "ui_clock_clocktype",
+				"type" : "combo",
+				"value" : 1
+			},
+			"clock_digital_fontcolor" : 
+			{
+				"condition" : "clock_clocktype.value == 2",
+				"order" : 3,
+				"text" : "ui_clock_digital_fontcolor",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"clock_digital_fontsize" : 
+			{
+				"condition" : "clock_clocktype.value == 2",
+				"max" : 96,
+				"min" : 24,
+				"order" : 4,
+				"text" : "ui_clock_digital_fontsize",
+				"type" : "slider",
+				"value" : 60
+			},
+			"clock_digital_timeformat" : 
+			{
+				"condition" : "clock_clocktype.value == 2",
+				"options" : 
+				[
+					{
+						"label" : "ui_clock_digital_timeformat_12h",
+						"value" : 1
+					},
+					{
+						"label" : "ui_clock_digital_timeformat_24h",
+						"value" : 2
+					}
+				],
+				"order" : 2,
+				"text" : "ui_clock_digital_timeformat",
+				"type" : "combo",
+				"value" : 2
+			},
+			"clock_heading" : 
+			{
+				"order" : 0,
+				"text" : "ui_clock_heading",
+				"type" : "text",
+				"value" : ""
+			},
+			"clock_position_h" : 
+			{
+				"options" : 
+				[
+					{
+						"label" : "ui_clock_position_h_left",
+						"value" : 1
+					},
+					{
+						"label" : "ui_clock_position_h_center",
+						"value" : 2
+					},
+					{
+						"label" : "ui_clock_position_h_right",
+						"value" : 3
+					}
+				],
+				"order" : 12,
+				"text" : "ui_clock_position_h",
+				"type" : "combo",
+				"value" : 2
+			},
+			"clock_position_subheading" : 
+			{
+				"order" : 10,
+				"text" : "ui_clock_position_subheading",
+				"type" : "text",
+				"value" : ""
+			},
+			"clock_position_v" : 
+			{
+				"options" : 
+				[
+					{
+						"label" : "ui_clock_position_v_top",
+						"value" : 1
+					},
+					{
+						"label" : "ui_clock_position_v_center",
+						"value" : 2
+					},
+					{
+						"label" : "ui_clock_position_v_bottom",
+						"value" : 3
+					}
+				],
+				"order" : 11,
+				"text" : "ui_clock_position_v",
+				"type" : "combo",
+				"value" : 2
+			},
+			"schemecolor" : 
+			{
+				"order" : 31,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.2 1 0.67"
+			},
+			"schemecolor_spacier" : 
+			{
+				"order" : 30,
+				"text" : "ui_schemecolor_spacier",
+				"type" : "text",
+				"value" : ""
+			},
+			"z_version" : 
+			{
+				"order" : 100,
+				"text" : "ui_z_version",
+				"type" : "text",
+				"value" : ""
+			}
+		}
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Technology" ],
+	"title" : "showTIME - Clock",
+	"type" : "web",
+	"visibility" : "public",
+	"workshopid" : "1438506042"
+}

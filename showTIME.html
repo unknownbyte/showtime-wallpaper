@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>showTIME</title>
+    <link rel="stylesheet" href="css/showTIME.css" type="text/css">
+</head>
+
+<body
+    data-clock-clocktype="none"
+    data-clock-position-h="center"
+    data-clock-position-v="center">
+    <div class="clock" id="clock-analog">
+        <span class="hand" id="clock-analog-hand-hour"></span>
+        <span class="hand" id="clock-analog-hand-minute"></span>
+        <span class="hand" id="clock-analog-hand-second"></span>
+    </div>
+    <div class="clock" id="clock-digital">
+        <span class="clock-digital-value" id="clock-digital-value">XX:XX:XX</span>
+    </div>
+    <canvas class="clock" id="clock-binary">Sorry, but it seems that this webkit-Engine does not support canvas!</canvas>
+    <script src="js/BackgroundAPI.js"></script>
+    <script src="js/ClockAPI.js"></script>
+    <script src="js/showTIME.js"></script>
+</body>
+
+</html>
